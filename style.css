@@ -1,0 +1,29 @@
+
+body {
+	font-family: Verdana;
+	/*background: #181818;*/
+	background: #181818;
+	overflow: hidden;
+}
+
+#site-under-construction-div {
+	text-align: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+#site-under-construction-img {
+	margin: 10% auto 60% auto;
+}
+
+#countdown-to-atchoy {
+	text-align: center;
+	color: #d99d0c;
+	font-size: 32px;
+	font-weight: bold;
+	padding-top: 4px;
+	line-height: 10px;
+}
