@@ -21,7 +21,8 @@ body {
 
 #countdown-to-atchoy {
 	text-align: center;
-	color: #d99d0c;
+	color: #181818;
+	/*color: #d99d0c;*/
 	font-size: 32px;
 	font-weight: bold;
 	padding-top: 4px;
