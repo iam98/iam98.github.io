@@ -1,30 +1,92 @@
-
 body {
-	font-family: Verdana;
-	/*background: #181818;*/
-	background: #181818;
-	overflow: hidden;
+    font-family: Verdana;
+    /*background: #181818;*/
+    background: #ffffff;
+    overflow: hidden;
 }
 
-#site-under-construction-div {
-	text-align: center;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
+#iam98_logo_small {
+    padding: 10px 10px 0 10px;
 }
 
-#site-under-construction-img {
-	margin: 10% auto 60% auto;
+#navigation {
+    height: 50px;
+    background: transparent url("../images/menu_background.png");
+}
+
+#navigation .navbar_item a {
+    font-size: 18px;
+    color: #ffffff !important;
+    line-height: normal;
+    padding-bottom: 10px;
+    background-color: transparent;
+}
+
+#navigation .navbar_item.active {
+    border-bottom: #ff5f07 3px solid;
+}
+
+#navigation .collapse.navbar-collapse.in li.navbar_item.active {
+    border-bottom: transparent;
+    border-left: #ff5f07 3px solid;
+}
+#navigation .collapsing.navbar-collapse li.navbar_item.active {
+    border-bottom: transparent;
+    border-left: #ff5f07 3px solid;
+}
+
+#navigation .collapse.navbar-collapse.in li.navbar_item a {
+    background: transparent url("../images/menu_background.png");
+}
+
+#navigation .collapsing.navbar-collapse li.navbar_item a {
+    background: transparent url("../images/menu_background.png");
+}
+
+#navigation div.navbar-header button.navbar-toggle {
+    background-color: transparent;
+    border: 0;
+}
+#iam98_avatar {
+    position: fixed;
+    bottom: 4px;
+    right: 6px;
+}
+
+#copyright {
+    position: fixed;
+    bottom: 6px;
+    right: 60px;
+    color: #ffffff;
+    font-size: 10px;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    height: 165px;
+    background: transparent url("../images/bottom_border_1280.png") right no-repeat;
+}
+
+.navbar {
+    border: 0 !important;
+}
+
+#home_content {
+    color: #ffffff;
+    height: 983px;
+    /*background: transparent url("../images/background_reference.jpg") no-repeat 88% 10%;*/
 }
 
 #countdown-to-atchoy {
-	text-align: center;
-	color: #181818;
-	/*color: #d99d0c;*/
-	font-size: 32px;
-	font-weight: bold;
-	padding-top: 4px;
-	line-height: 10px;
+    text-align: center;
+    color: #181818;
+    /*color: #d99d0c;*/
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 4px;
+    line-height: 10px;
 }
