@@ -11,7 +11,7 @@ body {
 
 #navigation {
     height: 50px;
-    background: transparent url("../images/menu_background.png");
+    background: transparent url("/resources/images/menu_background.png");
 }
 
 #navigation .navbar_item a {
@@ -36,17 +36,37 @@ body {
 }
 
 #navigation .collapse.navbar-collapse.in li.navbar_item a {
-    background: transparent url("../images/menu_background.png");
+    background: transparent url("/resources/images/menu_background.png");
 }
 
 #navigation .collapsing.navbar-collapse li.navbar_item a {
-    background: transparent url("../images/menu_background.png");
+    background: transparent url("/resources/images/menu_background.png");
 }
 
 #navigation div.navbar-header button.navbar-toggle {
     background-color: transparent;
     border: 0;
 }
+
+#navigation div.navbar-header {
+    height: 50px;
+}
+#navigation #myNavbar {
+    border: 0;
+}
+
+#navigation #myNavbar.in ul.navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top: #383838 2px solid;
+}
+
+#navigation #myNavbar.collapsing ul.navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top: #383838 2px solid;
+}
+
 #iam98_avatar {
     position: fixed;
     bottom: 4px;
@@ -55,20 +75,15 @@ body {
 
 #copyright {
     position: fixed;
-    bottom: 6px;
-    right: 60px;
+    bottom: 7px;
+    width: 100%;
+    text-align: center;
     color: #ffffff;
     font-size: 10px;
 }
 
 #footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border: 0;
-    height: 165px;
-    background: transparent url("../images/bottom_border_1280.png") right no-repeat;
+    background: transparent url("/resources/images/footer_background.png") repeat-x;
 }
 
 .navbar {
@@ -78,7 +93,7 @@ body {
 #home_content {
     color: #ffffff;
     height: 983px;
-    /*background: transparent url("../images/background_reference.jpg") no-repeat 88% 10%;*/
+    /*background: transparent url("/resources/images/background_reference.jpg") no-repeat 88% 10%;*/
 }
 
 #countdown-to-atchoy {

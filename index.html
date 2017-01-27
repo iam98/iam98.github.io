@@ -6,8 +6,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="resources/css/reset.css">
     <link rel="stylesheet" href="resources/bootstrap-3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet/less" href="resources/less/main.less">
+
+    <!-- set options before less.js script -->
+    <script>
+        less = {
+            env: "development",
+            async: false,
+            fileAsync: false,
+            poll: 3000,
+            functions: {},
+            dumpLineNumbers: "comments",
+            relativeUrls: false,
+            rootpath: ":/a.com/"
+        };
+    </script>
+    <script type="text/javascript" src="resources/js/less.min.js"></script>
 </head>
 <body>
 <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top">
@@ -42,11 +58,11 @@
 
 
 <footer>
-    <div id="footer">
+    <div id="footer" class="navbar navbar-fixed-bottom">
         <div id="iam98_avatar">
             <img src="resources/images/iam98_avatar_small.png">
         </div>
-        <div id="copyright">&copy; 2017 Xavier University High School Batch '98</div>
+        <div id="copyright" class="col-sm4">&copy; 2017 Xavier University High School Batch '98</div>
     </div>
 </footer>
 
