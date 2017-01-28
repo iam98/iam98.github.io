@@ -49,6 +49,35 @@
     </div>
 </nav>
 
+<!-- HOME START -->
+<!-- HOME START -->
+
+<div id="home_content" class="container-fluid content-pages">
+    <div class="row header-space">
+        <div class="col-xs-12">
+            <!--<div class="page-marker">PAGE NAME HERE</div>-->
+        </div>
+    </div>
+    <div class="row content-space">
+        <div class="col-xs-1 col-sm-2"></div>
+        <div class="col-xs-10 col-sm-8">
+            <h4>Home</h4>
+
+        </div>
+        <div class="col-xs-1 col-sm-2"></div>
+    </div>
+    <div class="row footer-space">
+        <div class="col-xs-12">
+
+        </div>
+    </div>
+</div>
+
+
+<!-- HOME END -->
+<!-- HOME END -->
+
+
 <!-- ABOUT US START-->
 <!-- ABOUT US START-->
 
@@ -95,9 +124,16 @@
     </div>
     <div class="row content-space">
         <div class="col-xs-1 col-sm-2"></div>
-        <div class="col-xs-10 col-sm-8">
+        <div class="col-xs-10 col-sm-8 real-content">
             <h4>Welcome The Officers for 2017&nbsp;-&nbsp;2018</h4>
 
+            <div class="w3-card-12">
+                <img src="/resources/images/image_place_holder.png" alt="Anthony Roa">
+                <div class="w3-container w3-center">
+                    <h5>Anthony Roa</h5>
+                    <div>President</div>
+                </div>
+            </div>
         </div>
         <div class="col-xs-1 col-sm-2"></div>
     </div>
@@ -151,28 +187,32 @@
     </div>
     <div class="row content-space">
         <div class="col-xs-1 col-sm-2"></div>
-        <div class="col-xs-10 col-sm-8">
-            <p>
+        <div class="col-xs-10 col-sm-8 real-content">
+            <div id="form_div">
                 <form>
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">Name <span class="glyphicon glyphicon-user"></span></label>
                         <input type="name" class="form-control" id="name">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email <span class="glyphicon glyphicon-envelope"></span></label>
                         <input type="email" class="form-control" id="email">
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject</label>
+                        <label for="phone">Phone<span class="glyphicon glyphicon-phone"></span></label>
+                        <input type="phone" class="form-control" id="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject <span class="glyphicon glyphicon-folder-close"></span></label>
                         <input type="subject" class="form-control" id="subject">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
+                        <label for="message">Message <span class="glyphicon glyphicon-comment"></span></label>
                         <textarea class="form-control" rows="5" id="message"></textarea>
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
-            </p>
+            </div>
         </div>
         <div class="col-xs-1 col-sm-2"></div>
     </div>
@@ -225,5 +265,7 @@
 
 <script type="text/javascript" src="resources/js/jquery.min.js"></script>
 <script type="text/javascript" src="resources/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/iam98Gui.js"></script>
+<script type="text/javascript" src="resources/js/main.js"></script>
 </body>
 </html>

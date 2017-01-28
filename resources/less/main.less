@@ -2,15 +2,34 @@
 @import "colors.less";
 @import "constants.less";
 
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
 body {
-    font-family: Verdana;
+    font-family: Verdana, Helvetica, Tahoma, Arial;
     /*background: #181818;*/
     background: @bodyBackground;
-    //overflow: hidden;
+    overflow: hidden !important;
 }
 
 #iam98_logo_small {
     padding: 10px 10px 0 10px;
+}
+
+#iam98_avatar {
+    position: fixed;
+    bottom: 4px;
+    right: 6px;
 }
 
 #navigation {
@@ -92,14 +111,8 @@ body {
 
 }
 
-#iam98_avatar {
-    position: fixed;
-    bottom: 4px;
-    right: 6px;
-}
-
 #footer {
-    background: transparent @footerBackgroundImage repeat-x;
+    background: transparent @footerBackgroundImage repeat-x bottom;
     border: 0 !important;
 
     #copyright {
@@ -156,8 +169,33 @@ body {
     }
 }
 
+#home_content {
+    //display: none;
+    background: @backgroundGray;
+
+    &.content-pages {
+        .row {
+            &.header-space {
+                div {
+                    height: @navigationHeight;
+                }
+            }
+
+            &.footer-space {
+                height: @navigationHeight;
+            }
+        }
+
+        .content-space {
+            //background: transparent @backgroundReference no-repeat 90% 0%;
+        }
+    }
+
+}
+
 #about_us_content {
     color: @aboutPageContentColor;
+    //background: transparent @backgroundReference no-repeat 90% 0%;
 
     .content-space {
         //border: #3c3c3c 1px solid;
@@ -174,22 +212,44 @@ body {
     }
 }
 
-#contact_us_content {
-    //color: @aboutPageContentColor;
+#news_content {
+    background: @backgroundGray;
 
     .content-space {
-        .form-group {
-            text-align: left;
-        }
-        //border: #3c3c3c 1px solid;
         .real-content {
-            background: transparent @opaqueGray70;
+            text-align: center;
 
-            //h4, p {
-            //    opacity: 1 !important;
-            //}
+            h4 {
+                padding-bottom: 20px;
+            }
+            h5 {
+                margin-top: 6px;
+                margin-bottom: 2px;
+            }
+        }
 
-            //opacity: 0.5;
+        .w3-card-12 {
+            max-width: 180px;
+            margin: auto;
+        }
+    }
+}
+
+#contact_us_content {
+    //color: @aboutPageContentColor;
+    background: @backgroundGray;
+
+    .content-space {
+        .real-content {
+        }
+        #form_div {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 500px;
+
+            .form-group {
+                text-align: left;
+            }
 
         }
     }
