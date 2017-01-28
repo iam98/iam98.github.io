@@ -1,8 +1,12 @@
+@import "images.less";
+@import "colors.less";
+@import "constants.less";
+
 body {
     font-family: Verdana;
     /*background: #181818;*/
-    background: #ffffff;
-    overflow: hidden;
+    background: @bodyBackground;
+    //overflow: hidden;
 }
 
 #iam98_logo_small {
@@ -10,61 +14,82 @@ body {
 }
 
 #navigation {
-    height: 50px;
-    background: transparent url("/resources/images/menu_background.png");
-}
+    //display: none;
+    height: @navigationHeight;
+    border: 0 !important;
+    background: transparent @navigationBackgroundImage;
 
-#navigation .navbar_item a {
-    font-size: 18px;
-    color: #ffffff !important;
-    line-height: normal;
-    padding-bottom: 10px;
-    background-color: transparent;
-}
+    .navbar_item {
+        a {
+            font-size: 18px;
+            color: @navigationColor !important;
+            line-height: normal;
+            padding-bottom: 10px;
+            background-color: transparent;
+        }
 
-#navigation .navbar_item.active {
-    border-bottom: #ff5f07 3px solid;
-}
+        &.active {
+            border-bottom: @navigationItemActiveIndicator 3px solid;
+        }
+    }
 
-#navigation .collapse.navbar-collapse.in li.navbar_item.active {
-    border-bottom: transparent;
-    border-left: #ff5f07 3px solid;
-}
-#navigation .collapsing.navbar-collapse li.navbar_item.active {
-    border-bottom: transparent;
-    border-left: #ff5f07 3px solid;
-}
+    .navbar-collapse {
+        &.collapse.in {
+            li {
+                &.navbar_item {
+                    &.active {
+                        border-bottom: transparent;
+                        border-left: @navigationItemActiveIndicator 3px solid;
+                    }
 
-#navigation .collapse.navbar-collapse.in li.navbar_item a {
-    background: transparent url("/resources/images/menu_background.png");
-}
+                    a {
+                        background: transparent @navigationBackgroundImage;
+                    }
+                }
+            }
+        }
 
-#navigation .collapsing.navbar-collapse li.navbar_item a {
-    background: transparent url("/resources/images/menu_background.png");
-}
+        &.collapsing {
+            li {
+                &.navbar_item {
+                    &.active {
+                        border-bottom: transparent;
+                        border-left: @navigationItemActiveIndicator 3px solid;
+                    }
 
-#navigation div.navbar-header button.navbar-toggle {
-    background-color: transparent;
-    border: 0;
-}
+                    a {
+                        background: transparent @navigationBackgroundImage;
+                    }
+                }
+            }
+        }
+    }
 
-#navigation div.navbar-header {
-    height: 50px;
-}
-#navigation #myNavbar {
-    border: 0;
-}
+    .navbar-header {
+        height: @navigationHeight;
 
-#navigation #myNavbar.in ul.navbar-nav {
-    margin-top: 0;
-    margin-bottom: 0;
-    border-top: #383838 2px solid;
-}
+        button.navbar-toggle {
+            background-color: transparent;
+            border: 0;
+        }
+    }
 
-#navigation #myNavbar.collapsing ul.navbar-nav {
-    margin-top: 0;
-    margin-bottom: 0;
-    border-top: #383838 2px solid;
+    #myNavbar {
+        border: 0;
+
+        &.in ul.navbar-nav {
+            margin-top: 0;
+            margin-bottom: 0;
+            border-top: @navigationNavbarBorderTop 2px solid;
+        }
+
+        &.collapsing ul.navbar-nav {
+            margin-top: 0;
+            margin-bottom: 0;
+            border-top: @navigationNavbarBorderTop 2px solid;
+        }
+    }
+
 }
 
 #iam98_avatar {
@@ -73,28 +98,103 @@ body {
     right: 6px;
 }
 
-#copyright {
-    position: fixed;
-    bottom: 7px;
-    width: 100%;
-    text-align: center;
-    color: #ffffff;
-    font-size: 10px;
-}
-
 #footer {
-    background: transparent url("/resources/images/footer_background.png") repeat-x;
-}
-
-.navbar {
+    background: transparent @footerBackgroundImage repeat-x;
     border: 0 !important;
+
+    #copyright {
+        position: fixed;
+        bottom: 7px;
+        width: 100%;
+        text-align: center;
+        color: @footerColor;
+        font-size: 10px;
+    }
 }
 
-#home_content {
-    color: #ffffff;
-    height: 983px;
-    /*background: transparent url("/resources/images/background_reference.jpg") no-repeat 88% 10%;*/
+.content-pages {
+    //color: #ffffff;
+    //height: 983px;
+    //border: #f90101 1px solid;
+    //background: transparent @backgroundReference no-repeat 88% 100%;
+
+    .row {
+        &.header-space {
+            div {
+                height: @contentPageHeaderSpaceHeight;
+                //vertical-align: bottom;
+            }
+
+            .page-marker {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 150px;
+                height: 29px;
+                text-transform: uppercase;
+                color: @contentPageMarkerColor;
+                padding: 4px 0 0 12px;
+                font-size: 16px;
+                background: transparent @contentPageMarkerBackgroundImage no-repeat;
+            }
+        }
+
+        &.content-space {
+            padding-top: 15px;
+            text-align: center;
+            min-height: 580px;
+
+            p {
+                text-align: justify;
+                padding: 10px 0;
+            }
+        }
+
+        &.footer-space {
+            height: @footerSpaceHeight;
+        }
+    }
 }
+
+#about_us_content {
+    color: @aboutPageContentColor;
+
+    .content-space {
+        //border: #3c3c3c 1px solid;
+        .real-content {
+            background: transparent @opaqueGray70;
+
+            //h4, p {
+            //    opacity: 1 !important;
+            //}
+
+            //opacity: 0.5;
+
+        }
+    }
+}
+
+#contact_us_content {
+    //color: @aboutPageContentColor;
+
+    .content-space {
+        .form-group {
+            text-align: left;
+        }
+        //border: #3c3c3c 1px solid;
+        .real-content {
+            background: transparent @opaqueGray70;
+
+            //h4, p {
+            //    opacity: 1 !important;
+            //}
+
+            //opacity: 0.5;
+
+        }
+    }
+}
+
 
 #countdown-to-atchoy {
     text-align: center;
