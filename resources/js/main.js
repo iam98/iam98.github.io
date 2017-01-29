@@ -8,6 +8,7 @@ $( document ).ready(function () {
     var gui = new iam98Gui();
 
     gui.resizePages();
+    gui.initNavigation();
 
     iam98.gui = gui;
 
