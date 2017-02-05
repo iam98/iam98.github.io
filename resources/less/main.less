@@ -17,7 +17,6 @@ html {
 
 body {
     font-family: Verdana, Helvetica, Tahoma, Arial;
-    /*background: #181818;*/
     background: @bodyBackground;
     overflow: hidden !important;
 }
@@ -26,17 +25,15 @@ body {
     padding: 10px 10px 0 10px;
 }
 
-#iam98_avatar {
-    position: fixed;
-    bottom: 4px;
-    right: 6px;
-}
-
 #navigation {
     //display: none;
     height: @navigationHeight;
     border: 0 !important;
     background: transparent @navigationBackgroundImage;
+
+    #navigation_contanier {
+        max-width: @maxWidth;
+    }
 
     .navbar_item {
         a {
@@ -111,9 +108,18 @@ body {
 
 }
 
-#footer {
+footer {
     background: transparent @footerBackgroundImage repeat-x bottom;
     border: 0 !important;
+    height: @footerSpaceHeight;
+
+    #footer {
+        max-width: @maxWidth;
+
+        #iam98_avatar {
+            float: right;
+        }
+    }
 
     #copyright {
         position: fixed;

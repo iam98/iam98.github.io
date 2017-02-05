@@ -28,7 +28,7 @@
 </head>
 <body>
 <nav id="navigation" class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
+    <div class="container-fluid" id="navigation_contanier">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
@@ -52,13 +52,14 @@
 <!-- HOME START -->
 <!-- HOME START -->
 
-<div id="home_content" class="container-fluid content-pages">
+<div id="home_content" class="container-fluid content-pages" data-navitem="nav_home">
     <div class="row header-space">
         <div class="col-xs-12">
             <!--<div class="page-marker">PAGE NAME HERE</div>-->
+            <div class="page-marker" style="display: none">Home</div>
         </div>
     </div>
-    <div class="row content-space">
+    <div class="row content-space in-view">
         <div class="col-xs-1 col-sm-2"></div>
         <div class="col-xs-10 col-sm-8">
             <h4>Home</h4>
@@ -81,7 +82,7 @@
 <!-- ABOUT US START-->
 <!-- ABOUT US START-->
 
-<div id="about_us_content" class="container-fluid content-pages">
+<div id="about_us_content" class="container-fluid content-pages" data-navitem="nav_about">
     <div class="row header-space">
         <div class="col-xs-12">
             <div class="page-marker">About Us</div>
@@ -116,7 +117,7 @@
 <!-- NEWS START-->
 <!-- NEWS START-->
 
-<div id="news_content" class="container-fluid content-pages">
+<div id="news_content" class="container-fluid content-pages" data-navitem="nav_news">
     <div class="row header-space">
         <div class="col-xs-12">
             <div class="page-marker">News</div>
@@ -151,7 +152,7 @@
 <!-- PROJECTS START -->
 <!-- PROJECTS START -->
 
-<div id="projects_content" class="container-fluid content-pages">
+<div id="projects_content" class="container-fluid content-pages" data-navitem="nav_projects">
     <div class="row header-space">
         <div class="col-xs-12">
             <div class="page-marker">Projects</div>
@@ -179,7 +180,7 @@
 <!-- CONTACT US START -->
 <!-- CONTACT US START -->
 
-<div id="contact_us_content" class="container-fluid content-pages">
+<div id="contact_us_content" class="container-fluid content-pages" data-navitem="nav_contact">
     <div class="row header-space">
         <div class="col-xs-12">
             <div class="page-marker">Contact Us</div>
@@ -199,7 +200,7 @@
                         <input type="email" class="form-control" id="email">
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone<span class="glyphicon glyphicon-phone"></span></label>
+                        <label for="phone">Phone <span class="glyphicon glyphicon-phone-alt"></span></label>
                         <input type="phone" class="form-control" id="phone">
                     </div>
                     <div class="form-group">
@@ -254,8 +255,8 @@
 
 <!--  END -->
 
-<footer>
-    <div id="footer" class="navbar navbar-fixed-bottom">
+<footer class="navbar navbar-fixed-bottom">
+    <div id="footer">
         <div id="iam98_avatar">
             <img src="resources/images/iam98_avatar_small.png">
         </div>
