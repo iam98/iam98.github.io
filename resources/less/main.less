@@ -115,6 +115,8 @@ footer {
 
     #footer {
         max-width: @maxWidth;
+        margin-right: auto;
+        margin-left: auto;
 
         #iam98_avatar {
             float: right;
@@ -125,6 +127,7 @@ footer {
         position: fixed;
         bottom: 7px;
         width: 100%;
+        max-width: @maxWidth;
         text-align: center;
         color: @footerColor;
         font-size: 10px;
@@ -136,6 +139,10 @@ footer {
     //height: 983px;
     //border: #f90101 1px solid;
     //background: transparent @backgroundReference no-repeat 88% 100%;
+    &.container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
 
     .row {
         &.header-space {
@@ -162,12 +169,16 @@ footer {
             padding-top: 15px;
             text-align: center;
             min-height: 580px;
+            max-width: @maxWidth;
+            margin-right: auto;
+            margin-left: auto;
 
             p {
                 text-align: justify;
                 padding: 10px 0;
             }
 
+            /*
             opacity: 0;
             -moz-transition: all 700ms ease-out;
             -webkit-transition: all 700ms ease-out;
