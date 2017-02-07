@@ -22,12 +22,13 @@ body {
 }
 
 #iam98_logo_small {
-    padding: 10px 10px 0 10px;
+    padding: 4px 6px 0 4px;
 }
 
 #navigation {
     //display: none;
     height: @navigationHeight;
+    min-height: @navigationHeight;
     border: 0 !important;
     background: transparent @navigationBackgroundImage;
 
@@ -37,10 +38,11 @@ body {
 
     .navbar_item {
         a {
-            font-size: 18px;
+            font-size: 14px;
             color: @navigationColor !important;
             line-height: normal;
-            padding-bottom: 10px;
+            padding-top: 8px;
+            padding-bottom: 6px;
             background-color: transparent;
         }
 
@@ -87,6 +89,7 @@ body {
         button.navbar-toggle {
             background-color: transparent;
             border: 0;
+            padding: 2px 4px;
         }
     }
 
@@ -130,15 +133,11 @@ footer {
         max-width: @maxWidth;
         text-align: center;
         color: @footerColor;
-        font-size: 10px;
+        font-size: 11px;
     }
 }
 
 .content-pages {
-    //color: #ffffff;
-    //height: 983px;
-    //border: #f90101 1px solid;
-    //background: transparent @backgroundReference no-repeat 88% 100%;
     &.container-fluid {
         padding-right: 0;
         padding-left: 0;
@@ -148,10 +147,10 @@ footer {
         &.header-space {
             div {
                 height: @contentPageHeaderSpaceHeight;
-                //vertical-align: bottom;
             }
 
             .page-marker {
+                display: none;
                 position: absolute;
                 bottom: 0;
                 left: 0;
@@ -178,29 +177,28 @@ footer {
                 padding: 10px 0;
             }
 
-            /*
-            opacity: 0;
-            -moz-transition: all 700ms ease-out;
-            -webkit-transition: all 700ms ease-out;
-            -o-transition: all 700ms ease-out;
-            transition: all 700ms ease-out;
-            -moz-transform: translate3d(0px, 200px, 0px);
-            -webkit-transform: translate3d(0px, 200px, 0px);
-            -o-transform: translate(0px, 200px);
-            -ms-transform: translate(0px, 200px);
-            transform: translate3d(0px, 200, 0px);
-            -webkit-backface-visibility: hidden;
-            -moz-backface-visibility: hidden;
-            backface-visibility: hidden;
+            //opacity: 0;
+            //-moz-transition: all 700ms ease-out;
+            //-webkit-transition: all 700ms ease-out;
+            //-o-transition: all 700ms ease-out;
+            //transition: all 700ms ease-out;
+            //-moz-transform: translate3d(0px, 200px, 0px);
+            //-webkit-transform: translate3d(0px, 200px, 0px);
+            //-o-transform: translate(0px, 200px);
+            //-ms-transform: translate(0px, 200px);
+            //transform: translate3d(0px, 200, 0px);
+            //-webkit-backface-visibility: hidden;
+            //-moz-backface-visibility: hidden;
+            //backface-visibility: hidden;
         }
 
         &.content-space.in-view {
-            opacity: 1;
-            -moz-transform: translate3d(0px, 0px, 0px);
-            -webkit-transform: translate3d(0px, 0px, 0px);
-            -o-transform: translate(0px, 0px);
-            -ms-transform: translate(0px, 0px);
-            transform: translate3d(0px, 0px, 0px);
+            //opacity: 1;
+            //-moz-transform: translate3d(0px, 0px, 0px);
+            //-webkit-transform: translate3d(0px, 0px, 0px);
+            //-o-transform: translate(0px, 0px);
+            //-ms-transform: translate(0px, 0px);
+            //transform: translate3d(0px, 0px, 0px);
         }
 
         &.footer-space {
@@ -211,7 +209,9 @@ footer {
 
 #home_content {
     //display: none;
-    background: @backgroundGray;
+    //background: @backgroundGray;
+    background: @backgroundGray @justiceLeague no-repeat 50% 40%;
+    //background: @backgroundGray @backgroundReference no-repeat 87% 60%;
 
     &.content-pages {
         .row {
@@ -227,7 +227,7 @@ footer {
         }
 
         .content-space {
-            //background: transparent @backgroundReference no-repeat 90% 0%;
+
         }
     }
 
