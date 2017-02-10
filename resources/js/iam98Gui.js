@@ -18,10 +18,12 @@ iam98Gui.prototype.resizePages = function() {
     contentPages.css("min-height", height);
     console.log("height changed to " + height);
 
+    var homeContent = $("#home_content");
     var homeContentSpace = $("#home_content .content-space");
     var homeContentHeader = $(".header-space", homeContentSpace);
     var homeContentFooter = $(".footer-space", homeContentSpace);
 
+    homeContent.css("height", height);
     homeContentSpace.css("min-height", height - homeContentHeader.height() - homeContentFooter.height());
 };
 
